@@ -131,7 +131,7 @@ if(!empty($_GET['data'])) {
 					while($row = mysql_fetch_array($res)) {
 						
 						//Set array data
-						$image[$counter] = array('image_id' => $row['image_id'], 'url' => 'http://localhost/data/' . $row['folder_name'] . $row['file_name'], 'frequency' => $row['data_frequency'], 'sample_rate' => $row['data_sample_rate'], 'bandwidth' => $row['data_bandwidth'], 'start_time' => $row['data_start_time'], 'end_time' => $row['data_end_time'], 'antennas' => $row['data_antennas'], 'data_pols' => $row['data_pols']);
+						$image[$counter] = array('image_id' => $row['image_id'], 'url' => $config['server'] . '/data/' . $row['folder_name'] . $row['file_name'], 'frequency' => $row['data_frequency'], 'sample_rate' => $row['data_sample_rate'], 'bandwidth' => $row['data_bandwidth'], 'start_time' => $row['data_start_time'], 'end_time' => $row['data_end_time'], 'antennas' => $row['data_antennas'], 'data_pols' => $row['data_pols']);
 						
 					}
 					
